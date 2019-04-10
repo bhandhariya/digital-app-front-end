@@ -1,0 +1,24 @@
+Add Branch <br>
+<input type="text" [(ngModel)]="branch"  >
+<input type="button" value="add branch" (click)="addBranch()" >
+
+<table *ngIf="AllBranch" class="table">
+  <thead>
+    <tr>
+      <th>SN</th>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of AllBranch; let i=index" >
+      <td>{{i+1}}</td>
+      <td>{{item.name}}</td>
+      <td>
+        <input type="button" value="delete" (click)="deleteBranch(item._id)"  >
+        <input type="button" value="edit">
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
