@@ -13,8 +13,8 @@
 
   <h1>Application Form</h1>
   <div class="border"></div>
-    <div class="container">
-        <div class="row">
+    <div class="container" *ngIf="obj" >
+        <div class="row"   >
             <div class="col-md-4" >
               
              <input type="date"  [(ngModel)]="obj.addmission_date"  class="contact-form-text" placeholder="Addmission Date">     

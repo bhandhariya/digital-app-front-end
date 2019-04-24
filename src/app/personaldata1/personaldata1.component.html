@@ -13,7 +13,7 @@
 
   <h1>Personal Data</h1>
   <div class="border"></div>
-    <div class="container">
+    <div class="container" *ngIf="obj" >
       <div class="row">
         <div class="col-md-12" >
          <textarea type="text" class="contact-form-text" [(ngModel)]="obj.permanent_address"  placeholder="Perment Address"></textarea>     
