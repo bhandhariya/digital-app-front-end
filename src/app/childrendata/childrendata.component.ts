@@ -26,7 +26,7 @@ export class ChildrendataComponent implements OnInit {
   }
   newChild(){
     
-    this.http.post('api/pat/addchild',this.obj).subscribe(this.cb)
+    this.http.post('https://digitalapp001.herokuapp.com/api/pat/addchild',this.obj).subscribe(this.cb)
   }
   cb=(dt)=>{
     if(dt.status==200){

@@ -23,9 +23,9 @@ export class FamilydataComponent implements OnInit {
   add(){
     if(this.marrige!=0){
       console.log(this.obj)
-      this.http.post('api/pat/addFamilyData',this.obj).subscribe(this.cb)
+      this.http.post('https://digitalapp001.herokuapp.com/api/pat/addFamilyData',this.obj).subscribe(this.cb)
     }else{
-      this.http.post('api/pat/addGuardian',this.obj).subscribe(this.cb)
+      this.http.post('https://digitalapp001.herokuapp.com/api/pat/addGuardian',this.obj).subscribe(this.cb)
     }
   }
   cb=(dt)=>{

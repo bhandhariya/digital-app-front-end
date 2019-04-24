@@ -29,7 +29,7 @@ export class PsychitricDataComponent implements OnInit {
       data:this.id
     }
     console.log(obj)
-     this.http.post('api/pat/getpatByID',obj).subscribe(this.cb)
+     this.http.post('https://digitalapp001.herokuapp.com/api/pat/getpatByID',obj).subscribe(this.cb)
   }
   cb=(dt)=>{
     this.patData=JSON.parse(dt._body)

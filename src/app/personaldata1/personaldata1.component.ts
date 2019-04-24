@@ -25,7 +25,7 @@ export class Personaldata1Component implements OnInit {
     this.getPatientDetails(); 
   }
   getPatientDetails(){
-    this.http.post('api/pat/getpatByID',this.data).subscribe(this.cb)
+    this.http.post('https://digitalapp001.herokuapp.com/api/pat/getpatByID',this.data).subscribe(this.cb)
   }
   cb=(dt)=>{
     var d=JSON.parse(dt._body);
@@ -33,7 +33,7 @@ export class Personaldata1Component implements OnInit {
   }
 add(){
   console.log(this.obj)
-   this.http.post('api/pat/addPersonal',this.obj).subscribe(this.cb1)
+   this.http.post('https://digitalapp001.herokuapp.com/api/pat/addPersonal',this.obj).subscribe(this.cb1)
 }
 cb1=(dt)=>{
   if(dt.status == 200){

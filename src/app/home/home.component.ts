@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
  this.getAllBranch();
   }
   getAllBranch(){
-    this.http.get('api/branch/getAllBranch').subscribe(this.cb1)
+    this.http.get('https://digitalapp001.herokuapp.com/api/branch/getAllBranch').subscribe(this.cb1)
   }
   cb1=(dt)=>{
     this.AllBranch=JSON.parse(dt._body)

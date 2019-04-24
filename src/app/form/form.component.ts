@@ -16,7 +16,7 @@ export class FormComponent implements OnInit {
 
 add(){
  
- this.http.post('api/pat/create',this.obj).subscribe(this.cb)
+ this.http.post('https://digitalapp001.herokuapp.com/api/pat/create',this.obj).subscribe(this.cb)
 }
 cb=(dt=>{
   if(dt.status == 200){
