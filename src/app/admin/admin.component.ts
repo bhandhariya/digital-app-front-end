@@ -14,7 +14,7 @@ export class AdminComponent implements OnInit {
     this.getAllBranch();
   }
   getAllBranch(){
-    this.http.get('api/branch/getAllBranch').subscribe(this.cb1)
+    this.http.get('https://digitalapp001.herokuapp.com/api/branch/getAllBranch').subscribe(this.cb1)
   }
 
   cb1=(dt)=>{
@@ -25,7 +25,7 @@ export class AdminComponent implements OnInit {
     var obj={
       name:this.branch
     }
-    this.http.post('api/branch/create',obj).subscribe(this.cb)
+    this.http.post('https://digitalapp001.herokuapp.com/api/branch/create',obj).subscribe(this.cb)
   }
   cb=(dt)=>{
     console.log(this.AllBranch)
