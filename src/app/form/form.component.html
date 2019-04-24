@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+<div class="contact-section">
+
+  <h1>Application Form</h1>
+  <div class="border"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" >
+              
+             <input type="date"  [(ngModel)]="obj.addmission_date"  class="contact-form-text" placeholder="Addmission Date">     
+            </div>
+            <div class="col-md-8">
+             <input type="file" class="contact-form-text" >     
+            </div>
+          </div>
+       <div class="row">
+       <div class="col-md-4" >
+        <input type="text" class="contact-form-text" [(ngModel)]="obj.first_name" placeholder="First Name">     
+       </div>
+       <div class="col-md-4">
+        <input type="text" class="contact-form-text" [(ngModel)]="obj.middle_name" placeholder="Middle Name">     
+       </div>
+       <div class="col-md-4">
+        <input type="email" class="contact-form-text" [(ngModel)]="obj.last_name" placeholder="Last Name">     
+       </div>
+     </div>
+
+        <div class="row">
+            <div class="col-md-4" >
+                    
+            </div>
+            <div class="col-md-4" >
+                <input (click)="add()"  type="button" class="contact-form-text" value="Next">     
+            </div>
+            <div class="col-md-4" >
+                    
+            </div>
+        </div>
+
+
+       
+
+    </div>
+</div>
+
+
+  </body>
+</html>

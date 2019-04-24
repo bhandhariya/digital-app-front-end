@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+<div class="contact-section">
+
+  <h1>Family Data Data</h1>
+  <div class="border"></div>
+    <div class="container">
+     
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+            <label for="" style="color:red" >Is Patient Is Married</label>
+            <select class="contact-form-text" [(ngModel)]="marrige"  name="" id="">
+        
+              <option value="0" >No</option>
+              <option value="1"  >Yes</option>
+              
+            </select>
+          </div>
+     </div>
+    </div>
+     <div *ngIf="marrige!=0" >
+      <div class="row">
+        <div class="col-md-4" >
+          <input type="text" class="contact-form-text"  [(ngModel)]="obj.spouse_name"  placeholder="Name of Spouse">       
+      </div>
+      <div class="col-md-4" >
+          <input type="text" class="contact-form-text" [(ngModel)]="obj.spouse_age" placeholder="Age Spouse">
+      </div>
+      <div class="col-md-4" >
+          <input type="text" class="contact-form-text" [(ngModel)]="obj.spouse_occupation"  placeholder="Occupation of Spouse">
+      </div>
+      <div class="col-md-12">
+          <textarea class="contact-form-text"  [(ngModel)]="obj.spouse_address" placeholder="Address of Spouse" ></textarea>
+      </div>
+      <div class="col-md-8">
+          <input type="text" class="contact-form-text"  [(ngModel)]="obj.spouse_relation_status" placeholder="Whether living together or separate">
+      </div>
+      <div class="col-md-4">
+          <input type="text" class="contact-form-text" [(ngModel)]="obj.no_of_childern" placeholder="number of childern">
+      </div>
+      </div>
+     </div>
+
+     <div class="row"  >
+      <div class="col-md-4">
+          <input type="text" class="contact-form-text" [(ngModel)]="obj.guardian_name"  placeholder="name of Father/mother/guardian">
+      </div>
+      <div class="col-md-4">
+          <input type="text" class="contact-form-text" [(ngModel)]="obj.guardian_contact_number"  placeholder="Contact Number">
+      </div>
+      <div class="col-md-4">
+          <input type="email" class="contact-form-text" [(ngModel)]="obj.guardian_email"  placeholder="Enter Email ID">
+      </div>
+      <div class="col-md-12">
+          <textarea type="text" class="contact-form-text" [(ngModel)]="obj.guardian_address"  placeholder="Address"></textarea>
+      </div>
+  </div>
+
+     <div class="row">
+      <div class="col-md-4" >
+              
+      </div>
+      <div class="col-md-4" >
+          <input (click)="add()"  type="button" class="contact-form-text" value="Next">     
+      </div>
+      <div class="col-md-4" >
+              
+      </div>
+  </div>
+
+
+
+
+    </div>
+</div>
+
+
+  </body>
+</html>

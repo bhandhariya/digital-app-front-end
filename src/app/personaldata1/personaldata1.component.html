@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+<div class="contact-section">
+
+  <h1>Personal Data</h1>
+  <div class="border"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" >
+         <textarea type="text" class="contact-form-text" [(ngModel)]="obj.permanent_address"  placeholder="Perment Address"></textarea>     
+        </div>
+      </div>
+          <div class="row">
+          <div class="col-md-3" >
+              <input type="text" class="contact-form-text" [(ngModel)]="obj.permanent_mobile"  placeholder="Mobile">     
+          </div>
+          <div class="col-md-3" >
+              <input type="text" class="contact-form-text" [(ngModel)]="obj.permanent_fax"  placeholder="Office Fax">     
+          </div>
+          <div class="col-md-3" >
+              <input type="text" class="contact-form-text" [(ngModel)]="obj.permanent_residance_number"  placeholder="Residence">     
+          </div>
+          <div class="col-md-3" >
+              <input type="text" class="contact-form-text" [(ngModel)]="obj.permanent_landline" placeholder="Landline">     
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-md-12" >
+             <textarea type="text" class="contact-form-text" [(ngModel)]="obj.correspondence_address" placeholder="Correspondence Address"></textarea>     
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-3" >
+                  <input type="text" class="contact-form-text"  [(ngModel)]="obj.correspondence_mobile"  [(ngModel)]="permanent_mobile" placeholder="Mobile">     
+              </div>
+              <div class="col-md-3" >
+                  <input type="text" class="contact-form-text"  [(ngModel)]="obj.correspondence_fax" placeholder="Office Fax">     
+              </div>
+              <div class="col-md-3" >
+                  <input type="text" class="contact-form-text" [(ngModel)]="obj.correspondence_residance_number"  placeholder="Residence">     
+              </div>
+              <div class="col-md-3" >
+                  <input type="text" class="contact-form-text"  [(ngModel)]="obj.correspondence_landline" placeholder="Landline">     
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12" >
+                  <input type="email" class="contact-form-text" [(ngModel)]="obj.email"  placeholder="E-mail Id">     
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-3" >
+                  <input type="text"  class="contact-form-text" [(ngModel)]="obj.DOB" placeholder="Date Of Birth">    
+              </div>
+              <div class="col-md-4" >
+                  <input type="date" class="contact-form-text" [(ngModel)]="obj.DOB" placeholder="Date Of Birth">    
+              </div>
+              <div class="col-md-2" >
+                  <input type="text" class="contact-form-text" [(ngModel)]="obj.age" placeholder="Age ">     
+              </div>
+              <div class="col-md-3" >
+                 
+                    <select id="my-input" class="contact-form-text" [(ngModel)]="obj.sex"  >
+                      <option>Select Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                    
+              </div>
+            
+          </div> 
+          
+          <div class="row">
+            <div class="col-md-4" >
+                <input type="text" class="contact-form-text" [(ngModel)]="obj.education" placeholder="Educational Qualification">     
+            </div>
+            <div class="col-md-4" >
+                <input type="text" class="contact-form-text" [(ngModel)]="obj.occupation" placeholder="Occupation">     
+            </div>
+            <div class="col-md-4" >
+                <input type="text" class="contact-form-text" [(ngModel)]="obj.marrital_status" placeholder="Marrital Status">     
+            </div>
+        </div>
+
+
+          <div class="row">
+              <div class="col-md-4" >
+                  
+                </div>
+            <div class="col-md-4" >
+              <input type="button" class="contact-form-text" value="next" (click)="add()"  >
+            </div>
+            <div class="col-md-4" >
+                
+              </div>
+
+          </div>     
+
+
+
+
+    </div>
+</div>
+
+
+  </body>
+</html>

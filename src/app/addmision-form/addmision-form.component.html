@@ -1,146 +1,204 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <div class="form-group">
-              <label for="">Date of Addmission</label>
-              <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              <small id="helpId" class="form-text text-muted">Help text</small>
+<!-- <input type="file" ng2FileSelect [uploader]="uploader" /> <br>
+<button type="button" class="btn btn-success btn-s" 
+  (click)="uploader.uploadAll()" 
+  [disabled]="!uploader.getNotUploadedItems().length" >
+      Upload an Image
+</button>  -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+<div class="contact-section">
+
+  <h1>Application Form</h1>
+  <div class="border"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" >
+              
+             <input type="text"   class="contact-form-text" placeholder="Addmission Date">     
             </div>
-      </div>
-      <div class="col-md-4">
-          <div class="form-group">
-            <label for="">Image</label>
-            <input type="file" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-            <small id="helpId" class="form-text text-muted">Help text</small>
+            <div class="col-md-8">
+             <input type="file" class="contact-form-text" >     
+            </div>
           </div>
-    </div>
-        <div class="col-md-4">
-            <div class="form-group">
-              <label for="">First Name</label>
-              <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-              <small id="helpId" class="form-text text-muted">Help text</small>
-            </div>
+       <div class="row">
+       <div class="col-md-4" >
+        <input type="text" class="contact-form-text" placeholder="First Name">     
+       </div>
+       <div class="col-md-4">
+        <input type="text" class="contact-form-text" placeholder="Middle Name">     
+       </div>
+       <div class="col-md-4">
+        <input type="email" class="contact-form-text" placeholder="Last Name">     
+       </div>
+     </div>
+        <div class="row">
+      <div class="col-md-12" >
+       <textarea type="text" class="contact-form-text" placeholder="Perment Address"></textarea>     
       </div>
-      <div class="col-md-4">
-        <div class="form-group">
-          <label for="">Middle Name</label>
-          <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-          <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+        <div class="row">
+        <div class="col-md-3" >
+            <input type="text" class="contact-form-text" placeholder="Mobile">     
         </div>
-  </div>
-  <div class="col-md-4">
-    <div class="form-group">
-      <label for="">Last Name</label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-      <small id="helpId" class="form-text text-muted">Help text</small>
+        <div class="col-md-3" >
+            <input type="text" class="contact-form-text" placeholder="Office Fax">     
+        </div>
+        <div class="col-md-3" >
+            <input type="text" class="contact-form-text" placeholder="Residence">     
+        </div>
+        <div class="col-md-3" >
+            <input type="text" class="contact-form-text" placeholder="Landline">     
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-md-12" >
+           <textarea type="text" class="contact-form-text" placeholder="Correspondence Address"></textarea>     
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3" >
+                <input type="text" class="contact-form-text" placeholder="Mobile">     
+            </div>
+            <div class="col-md-3" >
+                <input type="text" class="contact-form-text" placeholder="Office Fax">     
+            </div>
+            <div class="col-md-3" >
+                <input type="text" class="contact-form-text" placeholder="Residence">     
+            </div>
+            <div class="col-md-3" >
+                <input type="text" class="contact-form-text" placeholder="Landline">     
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" >
+                <input type="email" class="contact-form-text" placeholder="E-mail Id">     
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" >
+                <input type="text" class="contact-form-text" placeholder="Date Of Birth">     
+            </div>
+            <div class="col-md-4" >
+                <input type="text" class="contact-form-text" placeholder="Age in years">     
+            </div>
+            <div class="col-md-4" >
+               
+                  <select id="my-input" class="contact-form-text">
+                    <option>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                  
+            </div>
+          
+        </div>
+        <div class="row">
+            <div class="col-md-4" >
+                <input type="text" class="contact-form-text" placeholder="Educational Qualification">     
+            </div>
+            <div class="col-md-4" >
+                <input type="text" class="contact-form-text" placeholder="Occupation">     
+            </div>
+            <div class="col-md-4" >
+                <input type="text" class="contact-form-text" [(ngModel)]="marrital_status" placeholder="Marrital Status">     
+            </div>
+        </div>
+
+        <div class="row"  *ngIf="marrital_status!='NA'" >
+            <div class="col-md-4" >
+                <input type="text" class="contact-form-text" placeholder="Name of Spouse">       
+            </div>
+            <div class="col-md-4" >
+                <input type="text" class="contact-form-text" placeholder="Age Spouse">
+            </div>
+            <div class="col-md-4" >
+                <input type="text" class="contact-form-text" placeholder="Occupation of Spouse">
+            </div>
+            <div class="col-md-12">
+                <textarea class="contact-form-text" placeholder="Address of Spouse" ></textarea>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="contact-form-text" placeholder="Whether living together or separate">
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="contact-form-text" [(ngModel)]="childs" placeholder="number of childern">
+            </div>
+        </div>
+
+       <div  >
+        <div class="row"  >
+            <div class="col-md-4">
+                <input type="text" class="contact-form-text"   placeholder="name of childer">
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="contact-form-text"  placeholder="Contact Number">
+            </div>
+            <div class="col-md-4">
+                <input type="email" class="contact-form-text"  placeholder="Enter Email ID">
+            </div>
+            <div class="col-md-12">
+                <textarea type="text" class="contact-form-text"  placeholder="Address"></textarea>
+            </div>
+        </div>
+        <div class="row"  >
+            <div class="col-md-4">
+                <input type="text" class="contact-form-text"   placeholder="name of childer">
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="contact-form-text"  placeholder="Contact Number">
+            </div>
+            <div class="col-md-4">
+                <input type="email" class="contact-form-text"  placeholder="Enter Email ID">
+            </div>
+            <div class="col-md-12">
+                <textarea type="text" class="contact-form-text"  placeholder="Address"></textarea>
+            </div>
+        </div>
+       </div>
+
+       <div class="row"  >
+        <div class="col-md-4">
+            <input type="text" class="contact-form-text"   placeholder="name of Father/mother/guardian">
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="contact-form-text"  placeholder="Contact Number">
+        </div>
+        <div class="col-md-4">
+            <input type="email" class="contact-form-text"  placeholder="Enter Email ID">
+        </div>
+        <div class="col-md-12">
+            <textarea type="text" class="contact-form-text"  placeholder="Address"></textarea>
+        </div>
     </div>
-</div>
-<div class="col-md-12">
-    <div class="form-group">
-      <label for="">Corporate Address</label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-      <small id="helpId" class="form-text text-muted">Help text</small>
-    </div>
-</div>
-<div class="col-md-12">
-    <div class="form-group">
-      <label for="">Permanent Address</label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-      <small id="helpId" class="form-text text-muted">Help text</small>
-    </div>
-</div>
-<div class="col-md-4">
-    <div class="form-group">
-      <label for="">Age</label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-      <small id="helpId" class="form-text text-muted">Help text</small>
-    </div>
-</div>
-<div class="col-md-4">
-    <div class="form-group">
-      <label for="">Mobile No.</label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-      <small id="helpId" class="form-text text-muted">Help text</small>
-    </div>
-</div>
-<div class="col-md-4">
-    <div class="form-group">
-      <label for="">Parent name</label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-      <small id="helpId" class="form-text text-muted">Help text</small>
-    </div>
-</div>
-<div class="col-md-4">
-    <div class="form-group">
-      <label for="">Email-id</label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-      <small id="helpId" class="form-text text-muted">Help text</small>
-    </div>
-</div>
-<div class="col-md-4">
-    <div class="form-group">
-      <label for="">Date of birth</label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-      <small id="helpId" class="form-text text-muted">Help text</small>
-    </div>
-</div>
-<div class="col-md-4">
-    <div class="form-group">
-      <label for="">Education Qualification</label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-      <small id="helpId" class="form-text text-muted">Help text</small>
+
+
+        <div class="row">
+            <div class="col-md-4" >
+                    
+            </div>
+            <div class="col-md-4" >
+                <input (click)="add()"  type="button" class="contact-form-text" value="Next">     
+            </div>
+            <div class="col-md-4" >
+                    
+            </div>
+        </div>
+
+
+       
+
     </div>
 </div>
 
-      
-    </div>
-    <br>
-    
-</div>
 
-
-
-
-
-
-
-<div class="container">
-  
-      <form class="example-form">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Company (disabled)" disabled value="Google">
-          </mat-form-field>
-        
-          <table class="example-full-width" cellspacing="0"><tr>
-            <td><mat-form-field class="example-full-width">
-              <input matInput placeholder="First name">
-            </mat-form-field></td>
-            <td><mat-form-field class="example-full-width">
-              <input matInput placeholder="Long Last Name That Will Be Truncated">
-            </mat-form-field></td>
-          </tr></table>
-        
-          <p>
-            <mat-form-field class="example-full-width">
-              <textarea matInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-              <textarea matInput placeholder="Address 2"></textarea>
-            </mat-form-field>
-          </p>
-        
-          <table class="example-full-width" cellspacing="0"><tr>
-            <td><mat-form-field class="example-full-width">
-              <input matInput placeholder="City">
-            </mat-form-field></td>
-            <td><mat-form-field class="example-full-width">
-              <input matInput placeholder="State">
-            </mat-form-field></td>
-            <td><mat-form-field class="example-full-width">
-              <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
-              <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
-            </mat-form-field></td>
-          </tr></table>
-        </form>
-  
-</div>
+  </body>
+</html>

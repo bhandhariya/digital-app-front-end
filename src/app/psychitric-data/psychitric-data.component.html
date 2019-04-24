@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+<div class="contact-section">
+
+  <h1>Psychitric Data</h1>
+  <div class="border"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" >
+               <div class="form-group">
+                 <label for="">Duration of Illness</label>
+                 <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+               </div> 
+        </div>
+        <div class="col-md-8" >
+          <div class="form-group">
+            <label for="">Currunt symptoms</label>
+            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+          </div> 
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" >
+            <div class="form-group">
+              <label for="">Digonosis</label>
+              <textarea class="form-control" name="" id="" rows="3"></textarea>
+            </div>
+      </div>
+     
+  </div>
+
+  <div class="row">
+    <div class="col-md-3" >
+         <div class="form-group">
+           <label for="">Dr Name</label>
+           <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+          
+         </div>
+    </div>
+    <div class="col-md-3" *ngIf="patData" >
+      <div class="form-group" >
+        <label for="">Patient Name</label>
+        <input type="text" class="form-control" name="" [(ngModel)]="patData.first_name" id="" aria-describedby="helpId" placeholder="">
+       
+      </div>
+ </div>
+ <div class="col-md-3" *ngIf="patData" >
+  <div class="form-group" >
+    <label for="">Aged About</label>
+    <input type="text" class="form-control" name="" [(ngModel)]="patData.age" id="" aria-describedby="helpId" placeholder="">
+   
+  </div>
+</div>
+<div class="col-md-3"  >
+  <div class="form-group" >
+  
+    <ngb-timepicker class="form-control" [(ngModel)]="time"></ngb-timepicker>   
+  </div>
+</div>
+   
+</div>
+<div class="row">
+  <div class="col-md-12" >
+          <div class="form-group">
+            <label for="">Remarks if Any</label>
+            <textarea class="form-control" name="" id="" rows="3"></textarea>
+          </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-md-4" >
+          <div class="form-group">
+            <label for="">Signature File of Doctor</label>
+            <input type="file" class="contact-form-text" >  
+          </div>
+  </div>
+  <div class="col-md-4" >
+    <div class="form-group">
+      <label for="">Date</label>
+      <input type="date" class="contact-form-text" >  
+    </div>
+</div>
+
+
+</div>
+
+<div class="row">
+  <div class="col-md-4" >
+          <div class="form-group">
+            <label for="">Signature File of Guardian</label>
+            <input type="file" class="contact-form-text" >  
+          </div>
+  </div>
+  <div class="col-md-4" *ngIf="patData" >
+    <div class="form-group"  >
+      <label for="">Behalf of</label>
+      <input type="text" class="contact-form-text" name="" [(ngModel)]="patData.first_name" id="" aria-describedby="helpId" placeholder="">
+    </div>
+</div>
+<div class="col-md-4" >
+  <div class="form-group">
+    <label for="">Relationship with Patient</label>
+    <input type="text" class="contact-form-text" >  
+  </div>
+</div>
+
+
+</div>
+
+
+<div class="row">
+  <div class="col-md-12" >
+          <div class="form-group">
+            <label for="">I am Applying for Addmission on behalf of  </label>"<span style="color:blue;font-size: 40px">{{patData.first_name}} {{patData.middle_name}} {{patData.last_name}} </span> "
+            <!-- <input type="text" class="contact-form-text" >   -->
+          </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-4" >
+          <div class="form-group">
+            <label for="">Addmission Fee Rs</label>
+            <input type="text" class="contact-form-text" >  
+          </div>
+  </div>
+  <div class="col-md-8" >
+    <div class="form-group"  >
+      <label for="">First Month Rs (irresepactive of accommodation opted for) </label>
+      <input type="text" class="contact-form-text" name=""  id="" aria-describedby="helpId" placeholder="">
+    </div>
+</div>
+
+
+</div>
+
+
+<div class="row">
+  <div class="col-md-6" >
+          <div class="form-group">
+            <label for="">Second & consecutive months Rs (for single room)</label>
+            <input type="text" class="contact-form-text" >  
+          </div>
+  </div>
+  <div class="col-md-6"  >
+    <div class="form-group"  >
+      <label for="">Second & consecutive months Rs (for sharing room) </label>
+      <input type="text" class="contact-form-text" name=""  id="" aria-describedby="helpId" placeholder="">
+    </div>
+</div>
+
+
+</div>
+
+<div class="row">
+  <div class="col-md-4" >
+         <div class="form-group">
+           <label for="">Is there any criminal or civil case pending against Patient</label>
+           <select class="contact-form-text" name="" id="">
+             <option>Yes</option>
+             <option>no</option>
+             
+           </select>
+         </div>
+  </div>
+  <div class="col-md-4"  >
+    <div class="form-group"  >
+      <label for="">Relationship with Patient</label>
+      <input type="text" class="contact-form-text" name=""  id="" aria-describedby="helpId" placeholder="">
+    </div>
+</div>
+<div class="col-md-6"  >
+  <div class="form-group"  >
+    <label for="">Name of Guardian</label>
+    <input type="text" class="contact-form-text" name=""  id="" aria-describedby="helpId" placeholder="">
+  </div>
+</div>
+ 
+
+
+</div>
+
+<div class="row">
+  <div class="col-md-6" >
+     <div class="form-group">
+       <label for="">Signature of Applicant Seeking Admission</label>
+       <input type="file"
+         class="contact-form-text" name="" id="" aria-describedby="helpId" placeholder="">
+      
+     </div>     
+  </div>
+  
+  <div class="col-md-6" >
+    <div class="form-group">
+      <label for="">date</label>
+      <input type="file"
+        class="contact-form-text" name="" id="" aria-describedby="helpId" placeholder="">
+     
+    </div> 
+  </div>
+  <div class="col-md-6" >
+    <div class="form-group">
+      <label for="">Signature of Relative</label>
+      <input type="file"
+        class="contact-form-text" name="" id="" aria-describedby="helpId" placeholder="">
+     
+    </div> 
+  </div>
+ 
+  <div class="col-md-6" >
+    <div class="form-group">
+      <label for="">date</label>
+      <input type="file"
+        class="contact-form-text" name="" id="" aria-describedby="helpId" placeholder="">
+     
+    </div> 
+  </div>
+</div>
+
+
+        <div class="row">
+            <div class="col-md-4" >
+                    
+            </div>
+            <div class="col-md-4" >
+                <input (click)="next()"  type="button" class="contact-form-text" value="Next">     
+            </div>
+            <div class="col-md-4" >
+                    
+            </div>
+        </div>
+
+
+       
+
+    </div>
+</div>
+
+
+  </body>
+</html>

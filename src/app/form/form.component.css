@@ -1,0 +1,47 @@
+
+.full_form{
+  background: #eee;
+  margin-top: 50px;
+}
+.all_info {
+margin-top: 20px;
+
+}
+.form-control:focus {
+ border-color: none;
+-webkit-box-shadow: none;
+ box-shadow: none;
+ background:transparent;
+
+}	 
+label{
+      color: #737272;
+}
+.top_head{
+      top: 48px;
+   background: #eaf5c7;
+   font-weight: bold;
+}
+.top_head h3{
+   font-weight: bold;
+}
+span{
+  color:red;
+}
+.sub_btn button{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100px;
+  height: 40px;
+  background: green;
+  border:0;
+  color:#fff;
+}
+.form-control{
+  border-radius: 0;
+  box-shadow: none;
+      border: 0;
+      height:27px;
+           background: transparent;
+border-bottom: 1px solid #000;
+}

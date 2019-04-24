@@ -1,19 +1,21 @@
 <ul class="nav nav-tabs">
   <li class="nav-item">
     <a routerLink="admin" class="nav-link active">Admin</a>
+    
+    
   </li>
   <li class="nav-item dropdown" *ngFor="let item of AllBranch" >
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{item.name}}</a>
     <div class="dropdown-menu"  >
       <a class="dropdown-item" href="addform">Admission Form</a>
-      <a class="dropdown-item" href="#">Medical reports</a>
+      <a class="dropdown-item" href="form">FORM</a>
       <a class="dropdown-item" href="#">Invetigation</a>
 
       
     </div>
   </li>
   <li class="nav-item">
-    <a href="#" class="nav-link">Another link</a>
+    <a href="form" class="nav-link">Application Form</a>
   </li>
   <li class="nav-item">
     <a href="#" class="nav-link disabled">Disabled</a>

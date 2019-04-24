@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+<div class="contact-section">
+
+  <h1>Family Data Data</h1>
+  <div class="border"></div>
+    <div class="container">
+     
+      <div class="row"  >
+        <div class="col-md-4">
+            <input type="text" class="contact-form-text" [(ngModel)]="obj.name"   placeholder="name of childer">
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="contact-form-text" [(ngModel)]="obj.number"  placeholder="Contact Number">
+        </div>
+        <div class="col-md-4">
+            <input type="email" class="contact-form-text"  [(ngModel)]="obj.email" placeholder="Enter Email ID">
+        </div>
+        <div class="col-md-12">
+            <textarea type="text" class="contact-form-text" [(ngModel)]="obj.address"  placeholder="Address"></textarea>
+        </div>
+    </div>
+
+
+
+     <div class="row">
+      <div class="col-md-4" >
+        <input (click)="newChild()"  type="button" class="contact-form-text" value="Add Child">   
+      </div>
+      <div class="col-md-4" >
+          <input (click)="add()"  type="button" class="contact-form-text" value="Next">     
+      </div>
+      <div class="col-md-4" >
+              
+      </div>
+  </div>
+
+
+
+
+    </div>
+</div>
+
+
+  </body>
+</html>
