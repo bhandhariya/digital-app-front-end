@@ -35,7 +35,7 @@ export class AdminComponent implements OnInit {
     var obj={
       id:x
     }
-    this.http.post('api/branch/delete',obj).subscribe(this.cb2)
+    this.http.post('https://digitalapp001.herokuapp.com/api/branch/delete',obj).subscribe(this.cb2)
   }
   cb2=(dt)=>{
     alert(dt._body)
