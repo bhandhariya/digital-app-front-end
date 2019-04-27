@@ -9,6 +9,7 @@ import { FamilydataComponent } from './familydata/familydata.component';
 import { ChildrendataComponent } from './childrendata/childrendata.component';
 import { PsychitricDataComponent } from './psychitric-data/psychitric-data.component';
 import { HighRiskInformedConsentComponent } from './high-risk-informed-consent/high-risk-informed-consent.component';
+import { AllPatientsComponent } from './all-patients/all-patients.component';
 
 const routes: Routes = [
   {path:"admin",component:AdminComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path:"family",component:FamilydataComponent},
   {path:"childern",component:ChildrendataComponent},
   {path:"psy",component:PsychitricDataComponent},
-  {path:"high-risk",component:HighRiskInformedConsentComponent}
+  {path:"high-risk",component:HighRiskInformedConsentComponent},
+  {path:"allpat",component:AllPatientsComponent},
 ];
 
 @NgModule({

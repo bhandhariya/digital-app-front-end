@@ -4,6 +4,12 @@ import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
 import { FileUploadModule } from "ng2-file-upload";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { environment } from "../environments/environment";
+import { ngfModule} from "angular-file"
+import { AngularFireModule } from "angularfire2";
+import { AngularFireStorageModule } from "angularfire2/storage";
+
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +27,7 @@ import { FamilydataComponent } from './familydata/familydata.component';
 import { ChildrendataComponent } from './childrendata/childrendata.component';
 import { PsychitricDataComponent } from './psychitric-data/psychitric-data.component';
 import { HighRiskInformedConsentComponent } from './high-risk-informed-consent/high-risk-informed-consent.component';
+import { AllPatientsComponent } from './all-patients/all-patients.component';
 
 
 
@@ -36,7 +43,8 @@ import { HighRiskInformedConsentComponent } from './high-risk-informed-consent/h
     FamilydataComponent,
     ChildrendataComponent,
     PsychitricDataComponent,
-    HighRiskInformedConsentComponent
+    HighRiskInformedConsentComponent,
+    AllPatientsComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +60,12 @@ import { HighRiskInformedConsentComponent } from './high-risk-informed-consent/h
     MatListModule,
     MatInputModule,
     FileUploadModule,
-    NgbModule
+    NgbModule,
+    ngfModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
